@@ -1,0 +1,81 @@
+from machine import Pin
+import time
+
+ir = Pin(14, Pin.IN)
+green = Pin(27, Pin.OUT)
+red = Pin(26, Pin.OUT)
+
+def flash(pin, t):
+    pin.value(1)
+    time.sleep(t)
+    pin.value(0)
+
+while True:
+
+    i = 0   # tracks E L I A S
+
+    while True:
+
+        current = ""
+
+        # read one letter
+        while True:
+
+            if ir.value() == 0:
+                count = 0
+
+                while ir.value() == 0:
+                    count += 1
+                    time.sleep(0.01)
+
+                # DOT
+                if count < 20:
+                    current += '.'
+                    flash(green, 0.1)
+
+                # DASH
+                else:
+                    current += '-'
+                    flash(green, 0.4)
+
+            else:
+                gap = 0
+
+                while ir.value() == 1:
+                    gap += 1
+                    time.sleep(0.01)
+
+                if current != "":
+                    break   # letter finished
+
+        # check each letter
+
+        if i == 0 and current != '.':
+            flash(red, 0.5)
+            break
+
+        if i == 1 and current != '.-..':
+            flash(red, 0.5)
+            break
+
+        if i == 2 and current != '..':
+            flash(red, 0.5)
+            break
+
+        if i == 3 and current != '.-':
+            flash(red, 0.5)
+            break
+
+        if i == 4 and current != '...':
+            flash(red, 0.5)
+            break
+
+        # correct letter
+        flash(green, 0.5)
+        i += 1
+
+        # if full word correct → just reset (for testing)
+        if i == 5:
+            for _ in range(3):
+                flash(green, 0.2)
+            break
