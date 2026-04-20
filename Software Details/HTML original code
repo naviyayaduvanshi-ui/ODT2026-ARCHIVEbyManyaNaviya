@@ -1,0 +1,272 @@
+#{AI GENERATED]
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARCHIVE</title>
+<style>
+body{margin:0;background:#050505;color:#00ff9c;font-family:"Courier New"}
+.wrap{display:flex;height:100vh}
+.side{width:210px;border-right:1px solid #00ff9c;padding:8px;overflow:auto}
+.main{flex:1;display:flex;flex-direction:column}
+.head{border-bottom:1px solid #00ff9c;padding:6px;font-size:12px}
+.content{flex:1;padding:10px;overflow:auto}
+.nav{border-top:1px solid #00ff9c;padding:6px;text-align:center}
+button{background:#000;color:#00ff9c;border:1px solid #00ff9c;padding:6px;margin:2px}
+.file{padding:5px;border-bottom:1px dashed #003;cursor:pointer}
+.file:hover{background:#001a10}
+.page{display:none}
+.active{display:block}
+.img{height:120px;border:1px dashed #00ff9c;margin:8px 0;display:flex;align-items:center;justify-content:center;font-size:11px}
+audio{width:100%}
+.glitch{color:#00ff9c;text-shadow:1px 0 #003,-1px 0 #030}
+input{background:#000;border:1px solid #00ff9c;color:#00ff9c;padding:6px;width:100%;margin-top:6px}
+.small{font-size:12px;opacity:.8}
+.live{border:1px dashed #00ff9c;padding:6px;margin-top:8px;font-size:12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="side">
+<b>FILES</b>
+
+<!-- MAIN -->
+<div class="file" onclick="o(0)">incident_report.txt</div>
+<div class="file" onclick="o(1)">interview_reference.txt</div>
+<div class="file" onclick="o(2)">residence_record.txt</div>
+<div class="file" onclick="o(3)">archive_access.txt</div>
+
+<!-- MISDIRECTION -->
+<div class="file" onclick="o(4)">call_logs_full.txt</div>
+<div class="file" onclick="o(5)">floor_map_extended.txt</div>
+<div class="file" onclick="o(6)">archive_index_full.txt</div>
+<div class="file" onclick="o(7)">maintenance_report_full.txt</div>
+<div class="file" onclick="o(8)">unrecorded_transcript_full.txt</div>
+
+<!-- CASE FILE -->
+<div class="file" onclick="o(9)">case_file_MQ113.txt</div>
+
+<!-- MORSE -->
+<div class="file" onclick="o(10)">morse_reference.txt</div>
+
+<!-- FINAL -->
+<div class="file" onclick="o(11)">answering_unit</div>
+</div>
+
+<div class="main">
+
+<div class="head">
+CASE: MQ-113 // ARCHIVE INTERFACE // AUDIO PRIORITY ACTIVE
+</div>
+
+<div class="content">
+
+<!-- MAIN DOCS -->
+
+<div class="page active">
+<h3>incident_report.txt</h3>
+<p><b>METROPOLITAN POLICE DEPARTMENT</b></p>
+<p>CASE ID: MQ-113</p>
+<p>STATUS: ACTIVE</p>
+<p>Victim reports repeated sightings of unidentified individual.</p>
+<p>Pattern consistent.</p>
+<p class="glitch">Time reference in audio log.</p>
+<p class="small">Refer to incident_audio.aac</p>
+
+<!-- INSERT AUDIO -->
+<audio controls><source src=""></audio>
+</div>
+
+<div class="page">
+<h3>interview_reference.txt</h3>
+<p>INTERVIEW FILE INDEX</p>
+<p class="glitch">INT-33</p>
+<p>Audio contains full account.</p>
+<p class="small">Subject shows prior recognition.</p>
+
+<!-- INSERT AUDIO -->
+<audio controls><source src=""></audio>
+</div>
+
+<div class="page">
+<h3>residence_record.txt</h3>
+<p>Name: Mara Quinn</p>
+<p>Floor: 3</p>
+<p class="glitch">Unit in audio.</p>
+<p class="small">Refer to residence_audio.aac</p>
+
+<!-- INSERT AUDIO -->
+<audio controls><source src=""></audio>
+</div>
+
+<div class="page">
+<h3>archive_access.txt</h3>
+<p>Archive modified during investigation.</p>
+<p>Files relocated.</p>
+<p>Labels altered.</p>
+<p class="glitch">User identity in audio.</p>
+
+<!-- INSERT AUDIO -->
+<audio controls><source src=""></audio>
+</div>
+
+<!-- MISDIRECTION -->
+
+<div class="page">
+<h3>call_logs_full.txt</h3>
+<p>9:12 — 9821745631</p>
+<p>9:18 — 221345671</p>
+<p>9:23 — 563214331</p>
+<p>9:31 — 331245671</p>
+<p>9:37 — 221341562</p>
+<p>9:42 — UNKNOWN</p>
+<p>9:44 — 563214771</p>
+<p>9:48 — 331176542</p>
+<p>9:53 — 221337611</p>
+<p>pattern unstable</p>
+</div>
+
+<div class="page">
+<h3>floor_map_extended.txt</h3>
+<p>231 occupied</p>
+<p>232 vacant</p>
+<p>233 occupied</p>
+<p>234 storage</p>
+<p>235 occupied</p>
+<p>236 maintenance</p>
+<p>237 occupied</p>
+<p>239 vacant</p>
+<p class="glitch">sequence irregular</p>
+</div>
+
+<div class="page">
+<h3>archive_index_full.txt</h3>
+<p>111-A intake</p>
+<p>113-A incident</p>
+<p>118-D medical</p>
+<p>133-C interview</p>
+<p>134-C supplemental</p>
+<p>224-F access</p>
+<p class="small">structure compromised</p>
+</div>
+
+<div class="page">
+<h3>maintenance_report_full.txt</h3>
+<p>tapping noise ~11PM</p>
+<p>signal irregularities</p>
+<p>pattern-like interference</p>
+</div>
+
+<div class="page">
+<h3>unrecorded_transcript_full.txt</h3>
+<p>“you’re asking the wrong question.”</p>
+<p>“he already has access.”</p>
+<p>“you didn’t stop at the right one.”</p>
+</div>
+
+<!-- CASE FILE -->
+
+<div class="page">
+<h3>case_file_MQ113.txt</h3>
+<p>Victim: Mara Quinn</p>
+<p>Repeated sightings reported.</p>
+<p>Emergency call made.</p>
+<p>Archive tampering confirmed.</p>
+<p class="glitch">“answer is within the records.”</p>
+</div>
+
+<!-- MORSE -->
+
+<div class="page">
+<h3>morse_reference.txt</h3>
+<p>A .-</p>
+<p>B -...</p>
+<p>C -.-.</p>
+<p>D -..</p>
+<p>E .</p>
+<p>F ..-.</p>
+<p>G --.</p>
+<p>H ....</p>
+<p>I ..</p>
+<p>J .---</p>
+<p>K -.-</p>
+<p>L .-..</p>
+<p>M --</p>
+<p>N -.</p>
+<p>O ---</p>
+<p>P .--.</p>
+<p>Q --.-</p>
+<p>R .-.</p>
+<p>S ...</p>
+<p>T -</p>
+<p>U ..-</p>
+<p>V ...-</p>
+<p>W .--</p>
+<p>X -..-</p>
+<p>Y -.--</p>
+<p>Z --..</p>
+</div>
+
+<!-- FINAL -->
+
+<div class="page">
+<h3>answering_unit</h3>
+<p>DEVICE LOCKED</p>
+<input id="pass" placeholder="enter code">
+<button onclick="check()">SUBMIT</button>
+<p id="msg"></p>
+
+<div class="live">
+LIVE INPUT FROM DEVICE:<br>
+<span id="liveData">--</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="nav">
+<button onclick="p()">BACK</button>
+<button onclick="n()">NEXT</button>
+</div>
+
+</div>
+</div>
+
+<script>
+var d=document.getElementsByClassName("page"),i=0;
+function s(x){d[i].className="page";i=x;d[i].className="page active"}
+function o(x){s(x)}
+function n(){if(i<d.length-1)s(i+1)}
+function p(){if(i>0)s(i-1)}
+
+var correct="11323318";
+var tries=0;
+
+function check(){
+var v=document.getElementById("pass").value;
+if(v==correct){
+document.getElementById("msg").innerHTML="ACCESS GRANTED";
+}else{
+tries++;
+document.getElementById("msg").innerHTML="ACCESS DENIED";
+if(tries>=2){
+alert("HINT: extract numbers from audio files only");
+}
+}
+}
+
+/* LIVE ESP32 DATA (NO REFRESH) */
+setInterval(function(){
+fetch("/data")  /* ESP32 should serve this endpoint */
+.then(r=>r.text())
+.then(t=>{document.getElementById("liveData").innerHTML=t})
+.catch(()=>{});
+},1000);
+</script>
+
+</body>
+</html>
