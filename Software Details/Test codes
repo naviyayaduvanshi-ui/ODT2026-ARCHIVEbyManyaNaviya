@@ -1,0 +1,176 @@
+from machine import Pin, PWM
+import time
+
+ir = Pin(14, Pin.IN)
+green = Pin(27, Pin.OUT)
+red = Pin(26, Pin.OUT)
+
+servo = PWM(Pin(25))
+servo.freq(50)
+
+while True:
+
+    i = 0  
+
+    while True:
+
+        current = ""
+        print("\nNew Letter")
+
+        while True:
+
+            if ir.value() == 0:
+                count = 0
+
+                while ir.value() == 0:
+                    count += 1
+                    time.sleep(0.01)
+
+                if count < 20:
+                    current = current + '.'
+                    print("DOT")
+
+                    green.value(1)
+                    time.sleep(0.1)
+                    green.value(0)
+
+                else:
+                    current = current + '-'
+                    print("DASH")
+
+                    green.value(1)
+                    time.sleep(0.4)
+                    green.value(0)
+
+                time.sleep(0.2)
+
+            else:
+                gap = 0
+
+                while ir.value() == 1:
+                    gap += 1
+                    time.sleep(0.01)
+
+                    if gap > 50:
+                        if current != "":
+                            print("Letter:", current)
+                            break
+
+                if gap > 50 and current != "":
+                    break
+
+        # E
+        if i == 0:
+            if current != '.':
+                print("Wrong")
+
+                # RED LED
+                red.value(1)
+                time.sleep(0.5)
+                red.value(0)
+
+                # BOTH LEDs → reset signal
+                green.value(1)
+                red.value(1)
+                time.sleep(0.5)
+                green.value(0)
+                red.value(0)
+
+                break
+            print("E correct")
+
+        # L
+        if i == 1:
+            if current != '.-..':
+                print("Wrong")
+
+                red.value(1)
+                time.sleep(0.5)
+                red.value(0)
+
+                green.value(1)
+                red.value(1)
+                time.sleep(0.5)
+                green.value(0)
+                red.value(0)
+
+                break
+            print("L correct")
+
+        # I
+        if i == 2:
+            if current != '..':
+                print("Wrong")
+
+                red.value(1)
+                time.sleep(0.5)
+                red.value(0)
+
+                green.value(1)
+                red.value(1)
+                time.sleep(0.5)
+                green.value(0)
+                red.value(0)
+
+                break
+            print("I correct")
+
+        # A
+        if i == 3:
+            if current != '.-':
+                print("Wrong")
+
+                red.value(1)
+                time.sleep(0.5)
+                red.value(0)
+
+                green.value(1)
+                red.value(1)
+                time.sleep(0.5)
+                green.value(0)
+                red.value(0)
+
+                break
+            print("A correct")
+
+        # S
+        if i == 4:
+            if current != '...':
+                print("Wrong")
+
+                red.value(1)
+                time.sleep(0.5)
+                red.value(0)
+
+                green.value(1)
+                red.value(1)
+                time.sleep(0.5)
+                green.value(0)
+                red.value(0)
+
+                break
+
+            print("S correct → OPEN")
+
+            # SERVO ROTATION 
+            for d in range(40, 115):
+                servo.duty(d)
+                time.sleep(0.01)
+
+            # SUCCESS GREEN BLINKS
+            for _ in range(3):
+                green.value(1)
+                time.sleep(0.2)
+                green.value(0)
+                time.sleep(0.2)
+
+            break
+
+        # CORRECT then get GREEN
+        green.value(1)
+        time.sleep(0.5)
+        green.value(0)
+
+        i += 1
+
+#needs to be shortened, code may need to be changed as its too long.
